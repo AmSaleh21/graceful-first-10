@@ -1,0 +1,6 @@
+.vertical {
+  writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+}
+
+/* style="writing-mode:vertical-rl; -ms-writing-mode:tb-rl; height:15em;" */

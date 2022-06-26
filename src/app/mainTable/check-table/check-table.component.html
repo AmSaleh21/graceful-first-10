@@ -1,0 +1,39 @@
+<div class="image">
+  <img src="assets/pictures/header.png" alt="header" width="150">
+</div>
+<p-table class="position-relative" responsiveLayout="scroll">
+  <ng-template pTemplate="header">
+    <tr >
+      <th class="text-center header" colspan="11">جدول العشر المباركات</th>
+    </tr>
+    <tr>
+      <th *ngFor="let i of tableHead.reverse()">{{i+1}}</th>
+      <th> </th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="footer">
+    <tr *ngFor="let i of tableRows">
+      <td *ngFor="let j of tableCols">
+        <p-checkbox *ngIf="j != 10" name="do" (onChange)="saveSelection()"
+                    value="val{{i}}{{j}}" [(ngModel)]="selectedValues"></p-checkbox>
+        <p *ngIf="i == 0 && j == 10">الصلاة في وقتها</p>
+        <p *ngIf="i == 1 && j == 10">السنن الرواتب</p>
+        <p *ngIf="i == 2 && j == 10">القيام</p>
+        <p *ngIf="i == 3 && j == 10">جلسة الضحى</p>
+        <p *ngIf="i == 4 && j == 10">الضحى</p>
+        <p *ngIf="i == 5 && j == 10">أذكار الصباح</p>
+        <p *ngIf="i == 6 && j == 10">أذكار المساء</p>
+        <p *ngIf="i == 7 && j == 10">ورد القرآن</p>
+        <p *ngIf="i == 8 && j == 10">تكبير و تهليل</p>
+        <p *ngIf="i == 9 && j == 10">الحوقله</p>
+        <p *ngIf="i == 10 && j == 10">الصلاة على النبي</p>
+        <p *ngIf="i == 11 && j == 10">الإستغفار</p>
+        <p *ngIf="i == 12 && j == 10">الصيام</p>
+        <p *ngIf="i == 13 && j == 10">بر الوالدين</p>
+        <p *ngIf="i == 14 && j == 10">صدقة</p>
+        <p *ngIf="i == 15 && j == 10">صلة رحم</p>
+        <p *ngIf="i == 16 && j == 10">تفسير آيه أو طلب علم</p>
+      </td>
+    </tr>
+  </ng-template>
+</p-table>
