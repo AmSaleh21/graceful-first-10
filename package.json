@@ -1,6 +1,6 @@
 {
   "name": "first10",
-  "version": "0.1.0a",
+  "version": "0.1.1a",
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
