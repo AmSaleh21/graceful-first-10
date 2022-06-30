@@ -14,8 +14,9 @@
   <ng-template pTemplate="footer">
     <tr *ngFor="let i of tableRows">
       <td *ngFor="let j of tableCols">
-        <p-checkbox *ngIf="j != 10" name="do" (onChange)="saveSelection()"
+        <p-checkbox *ngIf="j != 10 && (j != 0 || i != 12)" name="do" (onChange)="saveSelection()"
                     value="val{{i}}{{j}}" [(ngModel)]="selectedValues"></p-checkbox>
+        <p *ngIf="(i===12 && j===0)">العيد</p>
         <p *ngIf="i == 0 && j == 10">الصلاة في وقتها</p>
         <p *ngIf="i == 1 && j == 10">السنن الرواتب</p>
         <p *ngIf="i == 2 && j == 10">القيام</p>
