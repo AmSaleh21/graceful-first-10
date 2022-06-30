@@ -4,6 +4,7 @@ import {TableIndexComponent} from "./mainTable/table-index/table-index.component
 import {AboutComponent} from "./core/about/about.component";
 import {ReadComponent} from "./info/read/read.component";
 import {GraceComponent} from "./info/grace/grace.component";
+import {NotFoundComponent} from "./core/not-found/not-found.component";
 
 
 const routes: Routes = [
@@ -11,6 +12,7 @@ const routes: Routes = [
   {path: "about", component:AboutComponent},
   {path: "read", component:ReadComponent},
   {path: "grace", component:GraceComponent},
+  {path: "**", component:NotFoundComponent}
 ];
 
 @NgModule({

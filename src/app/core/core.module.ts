@@ -5,13 +5,15 @@ import { NavComponent } from './nav/nav.component';
 import {RouterModule} from "@angular/router";
 import {ButtonModule} from "primeng/button";
 import {RippleModule} from "primeng/ripple";
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 
 @NgModule({
   declarations: [
     AboutComponent,
-    NavComponent
+    NavComponent,
+    NotFoundComponent
   ],
   exports: [
     NavComponent
